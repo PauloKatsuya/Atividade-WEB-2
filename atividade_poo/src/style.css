@@ -1,0 +1,154 @@
+/*
+
+paleta
+
+#780000
+#c1121f
+#fdf0d5
+#003049
+#669bbc
+
+*/
+
+:root{
+    --cor1: #780000;
+    --cor2: #c1121f;
+    --cor3: #fdf0d5;
+    --cor4: #003049;
+    --cor5: #669bbc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Correção: use aspas simples para box-sizing */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 60%;
+    text-align: center;
+}
+
+main h1, main h3 {
+    margin: 0; /* Remove margens padrão */
+}
+
+main h1 {
+    padding: 2%;
+}
+
+main form {
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+main form input {
+    width: 100%;
+    padding: .5em;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+main form button {
+    padding: 0.5em;
+    align-self: flex-start;
+    width: 15%;
+    cursor: pointer;
+    margin: 1em 0;
+}
+
+.container-funcionarios{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: 0 auto;
+    align-items: center;
+    padding: 2em;
+}
+
+.funcionarios{
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 1.2em;
+    display: flex;
+    flex-direction: row;
+    gap: .2em;
+    flex-wrap: wrap;
+}
+
+.funcionarios-card{
+    width: 25%;
+    padding: 1em;
+    margin: .9em 0;
+    border: 1px solid;
+    text-align: center;
+    border-radius: 2em;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.480);
+    background-color: var(--cor);
+}
+
+.funcionarios-card img{
+    max-width: 90%;
+}
+
+.funcionarios-card > h3,
+.funcionarios-card > h4{
+    margin-top: .9em;
+}
+
+footer{
+    padding: 5em;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    background-color: var(--cor5);
+}
+
+/*botoes*/
+
+.botao{
+    width: 200px;
+    padding: 1.2em;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 2em;
+    transition: .2s ease-in-out;
+}
+
+.limpar{
+    background-color: var(--cor1);
+    color: var(--cor3);
+    border: 1px solid var(--cor3);
+}
+
+.limpar:hover{
+    background-color: var(--cor3);
+    color: var(--cor1);
+    border: 1px solid var(--cor1);
+}
+
+.enviar{
+    background-color: var(--cor4);
+    color: var(--cor3);
+    border: 1px solid var(--cor3);
+}
+
+.enviar:hover{
+    background-color: var(--cor3);
+    color: var(--cor4);
+    border: 1px solid var(--cor4);
+}
+
+@media screen and (max-width: 900px) {
+    /* Estilos para telas com largura máxima de 600px */
+    .funcionarios-card{
+        width: 80%;
+    }
+}
